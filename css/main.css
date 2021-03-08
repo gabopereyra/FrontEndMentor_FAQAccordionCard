@@ -41,13 +41,83 @@ html {
   margin: auto;
   border-radius: 2rem;
 }
-.imagen{
+
+@media (min-width: 768px) { 
+  .principal{
+    overflow: hidden;
+    width: 70vw;
+    height: 70vh;
+  }
+ }
+
+@media (min-width: 768px) {
+  .principal {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+.imagen {
   position: relative;
 }
-.imagen img{
+
+.imagen_desktop {
+  display: none;
+}
+
+.imagen_tres_desktop{
+  display: none;
+}
+
+
+@media (min-width: 768px) {
+  .imagen {
+    display: none;
+  }
+  .imagen_desktop {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+
+  .imagen_uno_desktop{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: -17rem;
+    margin: auto;
+    z-index: 2;
+  }
+
+  .imagen_dos_desktop{
+    position: absolute;
+    transform: scale(0.8);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: -40rem;
+    margin: auto;
+    z-index: 1;
+  }
+
+  .imagen_tres_desktop{   
+    display: block;
+    position: absolute;
+    top: 7rem;
+    bottom: 0;
+    left: 13rem;
+    margin: auto;
+    z-index: 3;
+  }
+}
+
+.imagen img {
   position: absolute;
 }
-.imagen_uno, .imagen_dos{
+.imagen_uno,
+.imagen_dos {
   left: -1rem;
   right: 0;
   bottom: 0;
@@ -56,11 +126,11 @@ html {
 .imagen_uno {
   top: -2rem;
 }
-.imagen_dos{
+.imagen_dos {
   top: 4rem;
 }
 
-.texto{
+.texto {
   position: absolute;
   top: 20%;
   left: 0;
@@ -68,78 +138,101 @@ html {
   margin: 0;
 }
 
-.title{
+.title {
   color: var(--texto);
   text-align: center;
   font-size: 2.8rem;
   margin: 1rem;
 }
 
-.container_questions{
+.container_questions {
   margin: 0 1rem;
   padding: 1rem;
 }
 
 
-.question{
+.question {
   border-bottom: 1px solid var(--divisor);
-  padding: 0.5rem;
+  padding: 1rem;
   margin: 0.5rem;
 }
 
-.label{
+.label {
   display: flex;
 }
 
-.arrow{
+
+@media (min-width: 768px) {
+  .texto {
+    position: relative;
+    top: 0;
+    margin: auto 0;
+  }
+  .title {
+    text-align: left;
+  }
+  .container_questions {
+    padding: 2rem 6rem 2rem 0;
+    margin: 0;
+    font-size: 15px;
+  }
+  .question {
+    padding: 1rem 0;
+    margin-left: 0;
+  }
+  .title{
+    margin-left: 0;
+  }
+}
+
+
+.arrow {
   margin-left: auto;
   height: 8px;
 }
 
-label:hover{
-  color:var(--textoDos);
+label:hover {
+  color: var(--textoDos);
   font-weight: var(--bold);
 }
 
-#show, #show_dos, #show_tres, #show_cuatro, #show_cinco  {
-	display:none;
-
-
+#show,
+#show_dos,
+#show_tres,
+#show_cuatro,
+#show_cinco {
+  display: none;
 }
 
-label{
-    cursor:pointer;
+label {
+  cursor: pointer;
 }
 
-div#content, div#content_dos, div#content_tres, div#content_cuatro, div#content_cinco  {
-  display:none;
-
+div#content,
+div#content_dos,
+div#content_tres,
+div#content_cuatro,
+div#content_cinco {
+  display: none;
 }
-input#show:checked ~ div#content, input#show_dos:checked ~ div#content_dos, input#show_tres:checked ~ div#content_tres, input#show_cuatro:checked ~ div#content_cuatro, input#show_cinco:checked ~ div#content_cinco  {
-	display:block;
+
+input#show:checked ~ div#content,
+input#show_dos:checked ~ div#content_dos,
+input#show_tres:checked ~ div#content_tres,
+input#show_cuatro:checked ~ div#content_cuatro,
+input#show_cinco:checked ~ div#content_cinco {
+  display: block;
   margin: 0.5rem 0;
 }
-input#show:checked ~ #label_uno, input#show_dos:checked ~ #label_dos, input#show_tres:checked ~ #label_tres, input#show_cuatro:checked ~ #label_cuatro,input#show_cinco:checked ~ #label_cinco {
-	font-weight: var(--bold);
+
+input#show:checked ~ #label_uno,
+input#show_dos:checked ~ #label_dos,
+input#show_tres:checked ~ #label_tres,
+input#show_cuatro:checked ~ #label_cuatro,
+input#show_cinco:checked ~ #label_cinco {
+  font-weight: var(--bold);
   color: var(--texto);
 }
-
-input#show:checked ~ #arrow_uno, input#show_dos:checked ~ #arrow_dos, input#show_tres:checked ~ #arrow_tres, input#show_cuatro:checked ~ #arrow_cuatro,input#show_cinco:checked ~ #arrow_cinco {
-  rotate: 180deg;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .attribution {
   font-size: 11px;
@@ -150,10 +243,3 @@ input#show:checked ~ #arrow_uno, input#show_dos:checked ~ #arrow_dos, input#show
 .attribution a {
   color: hsl(229, 41%, 79%);
 }
-
-
-
-
-
-
-
