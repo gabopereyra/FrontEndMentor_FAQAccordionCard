@@ -42,18 +42,10 @@ html {
   border-radius: 2rem;
 }
 
-@media (min-width: 768px) { 
-  .principal{
-    overflow: hidden;
-    width: 70vw;
-    height: 70vh;
-  }
- }
-
 @media (min-width: 768px) {
   .principal {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    width: 60vw;
     gap: 1rem;
   }
 }
@@ -78,7 +70,8 @@ html {
   .imagen_desktop {
     display: block;
     position: relative;
-    width: 100%;
+    width: 50%;
+    overflow: hidden;
   }
 
   .imagen_uno_desktop{
@@ -86,7 +79,7 @@ html {
     top: 0;
     bottom: 0;
     right: 0;
-    left: -17rem;
+    left: -12rem;
     margin: auto;
     z-index: 2;
   }
@@ -105,9 +98,9 @@ html {
   .imagen_tres_desktop{   
     display: block;
     position: absolute;
-    top: 7rem;
+    top: 6rem;
     bottom: 0;
-    left: 13rem;
+    left: 18rem;
     margin: auto;
     z-index: 3;
   }
@@ -167,6 +160,8 @@ html {
     position: relative;
     top: 0;
     margin: auto 0;
+    width: 50%;
+    overflow: hidden;
   }
   .title {
     text-align: left;
