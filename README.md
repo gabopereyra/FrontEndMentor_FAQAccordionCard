@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Screenshot
 #### MOBILE LAYOUT:
-![](./screenshots/MOBILE.jpg)
+![](./screenshots/MOBILE.png)
 
 #### DESKTOP LAYOUT:
 ![](./screenshots/DESKTOP.jpg)
