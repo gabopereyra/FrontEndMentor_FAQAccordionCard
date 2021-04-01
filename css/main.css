@@ -71,7 +71,7 @@ main {
 .container_image {
   position: absolute;
   width: 100%;
-  height: calc(100vh * 0.15);
+  height: 25%;
 }
 
 .container_image--desktop{
@@ -85,23 +85,27 @@ main {
 .img_one{
     position: absolute;
     top: -100%;
-    left: calc(100vh * -0.05);
+    left: -10%;
     right: 0;
     margin: 0 auto;
+    height: 175%;
 }
 
 .img_two {
   position: absolute;
-  top: -10px;
-  left: 0;
+  top: -7%;
+  left: -3%;
   right: 0;
   margin: 0 auto;
+  height: 100%;
 }
 
 .container_text {
   margin: 8rem 0.9rem 2.8rem 0.9rem;
   width: 80%;
-  min-height: calc(100vh * 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .container_question {
