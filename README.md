@@ -60,4 +60,4 @@ Learn more about standars to declared CSS.
 
 - GitHub - [@gabopereyra](https://github.com/gabopereyra)
 - Frontend Mentor - [@gabopereyra](https://www.frontendmentor.io/profile/gabopereyra)
-- Twitter - [@gabs_pereyra](https://github.com/gabopereyra)
+- Twitter - [@gabs_pereyra](https://twitter.com/gabs_pereyra)
